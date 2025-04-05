@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Kanban Plan</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <style>
+        .legal-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .legal-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .legal-header h1 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .legal-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        .legal-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .legal-section h2 {
+            color: var(--primary);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .legal-section h3 {
+            color: var(--dark);
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.1rem;
+        }
+        
+        .legal-section p, .legal-section ul {
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        
+        .legal-section ul {
+            padding-left: 1.5rem;
+        }
+        
+        .legal-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-align: right;
+            margin-top: 2rem;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .legal-container {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+    
+    <div class="container">
+        <div class="legal-container">
+            <header class="legal-header">
+                <h1>Política de Privacidad</h1>
+                <p>Última actualización: <span id="current-date"></span></p>
+            </header>
+            
+            <div class="legal-section">
+                <p>En Kanban Plan, nos comprometemos a proteger y respetar su privacidad. Esta política explica cómo recopilamos, usamos y protegemos su información personal.</p>
+            </div>
+            
+            <div class="legal-section">
+                <h2>1. Información que recopilamos</h2>
+                <p>Recopilamos los siguientes tipos de información:</p>
+                
+                <h3>Información que usted nos proporciona</h3>
+                <ul>
+                    <li>Datos de registro (nombre, email)</li>
+                    <li>Contenido que crea en la aplicación (tareas, eventos)</li>
+                    <li>Comunicaciones con nuestro equipo de soporte</li>
+                </ul>
+                
+                <h3>Información recopilada automáticamente</h3>
+                <ul>
+                    <li>Datos de uso (cómo interactúa con la aplicación)</li>
+                    <li>Datos técnicos (tipo de dispositivo, navegador, dirección IP)</li>
+                </ul>
+            </div>
+            
+            <div class="legal-section">
+                <h2>2. Cómo usamos su información</h2>
+                <p>Utilizamos la información recopilada para:</p>
+                <ul>
+                    <li>Proveer y mantener nuestro servicio</li>
+                    <li>Notificarle sobre cambios en el servicio</li>
+                    <li>Permitirle participar en características interactivas</li>
+                    <li>Proveer soporte al cliente</li>
+                    <li>Mejorar y personalizar la experiencia del usuario</li>
+                    <li>Garantizar la seguridad de la aplicación</li>
+                </ul>
+            </div>
+            
+            <div class="legal-section">
+                <h2>3. Compartir información</h2>
+                <p>No vendemos ni alquilamos sus datos personales. Podemos compartir información con:</p>
+                <ul>
+                    <li>Proveedores de servicios que nos ayudan a operar la aplicación</li>
+                    <li>Autoridades cuando lo requiera la ley</li>
+                    <li>Nuevos propietarios en caso de fusión o adquisición</li>
+                </ul>
+            </div>
+            
+            <div class="legal-section">
+                <h2>4. Seguridad de datos</h2>
+                <p>Implementamos medidas técnicas y organizativas para proteger sus datos personales, incluyendo:</p>
+                <ul>
+                    <li>Cifrado de datos en tránsito (SSL/TLS)</li>
+                    <li>Almacenamiento seguro en servidores protegidos</li>
+                    <li>Acceso restringido al personal autorizado</li>
+                </ul>
+            </div>
+            
+            <div class="legal-section">
+                <h2>5. Sus derechos</h2>
+                <p>Usted tiene derecho a:</p>
+                <ul>
+                    <li>Acceder a sus datos personales</li>
+                    <li>Solicitar corrección de datos inexactos</li>
+                    <li>Solicitar eliminación de sus datos</li>
+                    <li>Oponerse al procesamiento de sus datos</li>
+                    <li>Solicitar una copia de sus datos en formato portable</li>
+                </ul>
+                <p>Para ejercer estos derechos, contáctenos en privacy@kanbanplan.com</p>
+            </div>
+            
+            <div class="legal-section">
+                <h2>6. Cambios a esta política</h2>
+                <p>Podemos actualizar esta política ocasionalmente. Le notificaremos sobre cambios importantes mediante un aviso en la aplicación o por correo electrónico.</p>
+            </div>
+            
+            <div class="last-updated">
+                <p>Esta política entra en vigor el <span id="effective-date"></span></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="app-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <!-- Columna 1: Logo y descripción -->
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 17L9 11L13 15L21 7" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 13L9 7L13 11L21 3" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+                        </svg>
+                        <span>Planificiador Kanban</span>
+                    </div>
+                    <p class="footer-description">Gestión visual de tareas y proyectos</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><svg width="20" height="20" fill="currentColor"><path d="M..."/></svg></a>
+                        <a href="#" aria-label="GitHub"><svg width="20" height="20" fill="currentColor"><path d="M..."/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg width="20" height="20" fill="currentColor"><path d="M..."/></svg></a>
+                    </div>
+                </div>
+                
+                <!-- Columna 2: Enlaces rápidos -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="guide.html">Guía de Usuario</a></li>
+                        <li><a href="#">Documentación API</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 3: Soporte -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Soporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="#">Reportar error</a></li>
+                        <li><a href="#">Sugerencias</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 4: Newsletter -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Actualizaciones</h4>
+                    <p class="footer-newsletter-text">Recibe las últimas novedades:</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="tu@email.com" required>
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <span>v1.2.0</span>
+                    <span id="last-saved">Último guardado: <span id="save-time"></span></span>
+                    <span>© 2025 Planificador Kanban</span>
+                    <a href="privacy.html">Privacidad</a>
+                    <a href="terms.html">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mostrar fecha actual
+        document.addEventListener('DOMContentLoaded', function() {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date();
+            
+            document.getElementById('current-date').textContent = today.toLocaleDateString('es-ES', options);
+            document.getElementById('effective-date').textContent = today.toLocaleDateString('es-ES', options);
+            
+            // Reloj
+            function updateClock() {
+                const now = new Date();
+                document.getElementById('clock').textContent = now.toLocaleTimeString('es-ES', {hour12: false});
+            }
+            updateClock();
+            setInterval(updateClock, 1000);
+        });
+    </script>
+</body>
+</html>

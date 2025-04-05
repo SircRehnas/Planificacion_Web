@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Planificador KanBan</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .contact-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-header h1 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .contact-info h2 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            margin: 0 0 0.3rem;
+            color: var(--dark);
+        }
+        
+        .contact-details p, .contact-details a {
+            margin: 0;
+            color: var(--gray);
+            text-decoration: none;
+        }
+        
+        .contact-details a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .form-group label {
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            align-self: flex-start;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+    
+    <div class="container">
+        <div class="contact-container">
+            <header class="contact-header">
+                <h1>Contacta con Nosotros</h1>
+                <p>¿Tienes preguntas, sugerencias o necesitas soporte? Estamos aquí para ayudarte.</p>
+            </header>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Información de Contacto</h2>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Correo Electrónico</h3>
+                            <a href="mailto:soporte@planificadorkanban.com">soporte@planificadorkanban.com</a>
+                            <p>Respuesta en 24-48 horas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-details">
+                            <h3>Soporte Técnico</h3>
+                            <a href="https://help.planificadorkanban.com" target="_blank">Centro de Ayuda</a>
+                            <p>Documentación y preguntas frecuentes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h3>Comunidad</h3>
+                            <a href="#" target="_blank">Foro de Usuarios</a>
+                            <p>Comparte con otros usuarios</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">🏢</div>
+                        <div class="contact-details">
+                            <h3>Oficina Principal</h3>
+                            <p>Calle Aplicación, 123</p>
+                            <p>28080 Madrid, España</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Envíanos un Mensaje</h2>
+                    <form action="mailto:soporte@planificadorkanban.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Selecciona un tema</option>
+                                <option value="soporte">Soporte Técnico</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="colaboracion">Colaboración</option>
+                                <option value="prensa">Prensa</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="app-footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <!-- Columna 1: Logo y descripción -->
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 17L9 11L13 15L21 7" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M3 13L9 7L13 11L21 3" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+                        </svg>
+                        <span>Planificiador Kanban</span>
+                    </div>
+                    <p class="footer-description">Gestión visual de tareas y proyectos</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><svg width="20" height="20" fill="currentColor"><path d="M..."/></svg></a>
+                        <a href="#" aria-label="GitHub"><svg width="20" height="20" fill="currentColor"><path d="M..."/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg width="20" height="20" fill="currentColor"><path d="M..."/></svg></a>
+                    </div>
+                </div>
+                
+                <!-- Columna 2: Enlaces rápidos -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="guide.html">Guía de Usuario</a></li>
+                        <li><a href="#">Documentación API</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 3: Soporte -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Soporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="#">Reportar error</a></li>
+                        <li><a href="#">Sugerencias</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 4: Newsletter -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Actualizaciones</h4>
+                    <p class="footer-newsletter-text">Recibe las últimas novedades:</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="tu@email.com" required>
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <span>v1.2.0</span>
+                    <span id="last-saved">Último guardado: <span id="save-time"></span></span>
+                    <span>© 2025 Planificador Kanban</span>
+                    <a href="privacy.html">Privacidad</a>
+                    <a href="terms.html">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Actualizar reloj
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            if (clockElement) {
+                const now = new Date();
+                clockElement.textContent = now.toLocaleTimeString('es-ES', {hour12: false});
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            updateClock();
+            setInterval(updateClock, 1000);
+        });
+    </script>
+</body>
+</html>
