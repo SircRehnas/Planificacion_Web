@@ -9,11 +9,16 @@ Planificacion_Web es una aplicación web completa para la gestión de tareas per
 
 ## Características Principales
 
-   ✅ Calendario integrado para planificación de sprints 
-   ✅ Drag & Drop para mover tareas entre columnas 
+   ✅ Calendario integrado para planificación de sprints
+
+   ✅ Drag & Drop para mover tareas entre columnas
+
    ✅ Personalización de tarjetas (colores, fechas, descripciones) 
+
    ✅ Exportar/Importar datos en JSON 
+
    ✅ Diseño moderno y responsive  
+
 
 ### 📌 Tablero Kanban
 * Organiza tus tareas en columnas personalizables (Por hacer, En progreso, Completado)
