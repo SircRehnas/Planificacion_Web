@@ -17,7 +17,7 @@ jobs:
         run: |
           rm -rf .github/ README.md SECURITY.md LICENSE.md
           mkdir -p public
-          cp -r index.html css/ js/ images/ public/  # Copia SOLO lo necesario
+          cp -r index.html css/ js/ public/  # Copia SOLO lo necesario
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
