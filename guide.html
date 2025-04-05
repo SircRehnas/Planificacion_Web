@@ -1,0 +1,353 @@
+
+    
+    
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Usuario - Planificación Kanban</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <style>
+        :root {
+            --sidebar-width: 220px; /* Ancho reducido del menú */
+            --transition-speed: 0.3s;
+        }
+        
+        body {
+            display: grid;
+            grid-template-columns: var(--sidebar-width) 1fr;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Sidebar Navigation - Versión más compacta */
+        .sidebar {
+            background: linear-gradient(135deg, #3f37c9 0%, #4361ee 100%);
+            color: white;
+            padding: 1.5rem 1rem;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .sidebar-header h2 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        
+        .sidebar-header p {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin: 0.25rem 0 0;
+        }
+        
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            transition: all var(--transition-speed) ease;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-item:hover {
+            background-color: rgba(255,255,255,0.15);
+        }
+        
+        .nav-item.active {
+            background-color: rgba(255,255,255,0.25);
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        /* Clock - Añadido estilo para el reloj */
+        #clock {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-family: monospace;
+            z-index: 1000;
+        }
+        
+        /* Resto de estilos (simplificados para brevedad) */
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent);
+        }
+        
+        .step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .step-number {
+            background-color: var(--primary);
+            color: white;
+            min-width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: fixed;
+                width: 220px;
+                transform: translateX(-100%);
+                z-index: 100;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                padding: 1rem;
+                margin-left: 0;
+            }
+        }
+
+         /* Icons (using Unicode symbols as fallback) */
+        .icon-kanban:before { content: "📋"; }
+        .icon-calendar:before { content: "📅"; }
+        .icon-data:before { content: "💾"; }
+        .icon-help:before { content: "❓"; }
+        .icon-home:before { content: "🏠"; }
+    </style>
+</head>
+<body>
+    <!-- Reloj visible en todas las páginas -->
+    <div id="clock"></div>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-toggle" id="menuToggle" style="display: none;">☰</button>
+    
+    <!-- Sidebar Navigation - Más compacto -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Guía Rápida</h2>
+            <p>Kanban v1.2</p>
+        </div>
+        
+        <div class="sidebar-nav">
+            <a href="#introduction" class="nav-item active">📋 Introducción</a>
+            <a href="#kanban-board" class="nav-item">🗂 Tablero</a>
+            <a href="#calendar" class="nav-item">📅 Calendario</a>
+            <a href="#data-management" class="nav-item">💾 Datos</a>
+            <a href="index.html" class="nav-item">🏠 Volver</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1>Guía de Usuario</h1>
+        
+        <section id="introduction" class="guide-section">
+            <h2>Introducción</h2>
+                <p>Bienvenido a la aplicación de Planificación Kanban con Calendario integrado. Esta herramienta te permite organizar tus tareas de manera visual y programar eventos importantes.</p>
+                
+                <div class="feature-card">
+                    <h3>Características principales</h3>
+                    <ul>
+                        <li><strong>Sistema Kanban visual</strong> con 4 columnas de flujo de trabajo</li>
+                        <li><strong>Calendario interactivo</strong> con eventos personalizables</li>
+                        <li><strong>Sincronización automática</strong> entre tareas y eventos</li>
+                        <li><strong>Personalización</strong> con colores y categorías</li>
+                        <li><strong>Portabilidad</strong> con importación/exportación de datos</li>
+                    </ul>
+                    <div class="tip">
+                        <strong>Consejo:</strong> Usa colores diferentes para categorizar tus tareas y mantén tu calendario actualizado.
+                    </div>
+                </div>
+            </section>
+        <section id="kanban-board" class="guide-section">
+            <h2>Tablero Kanban</h2>
+            <div class="feature-card">
+                <h3>Gestión de tareas</h3>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <p><strong>Crear tarea:</strong> Haz clic en "+ Añadir tarea" en cualquier columna.</p>
+                        <p>Completa el formulario con título, descripción, fecha y selecciona un color identificativo.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <p><strong>Mover tareas:</strong> Arrastra y suelta entre columnas para cambiar su estado.</p>
+                        <p>Al mover a "Completado", la tarjeta se marcará automáticamente con ✅ y cambiará su estilo visual.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <p><strong>Acciones rápidas:</strong> Cada tarjeta tiene botones para:</p>
+                        <ul>
+                            <li>✓ Completar/descompletar</li>
+                            <li>✎ Editar (incluyendo color)</li>
+                            <li>✕ Eliminar (con confirmación)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card">
+                <h3>Sistema de colores</h3>
+                <p>Personaliza tus tareas seleccionando entre 6 colores diferentes:</p>
+                <div style="display: flex; gap: 10px; margin: 15px 0;">
+                    <div style="width: 30px; height: 30px; border-radius: 50%; background: #f8f9fa; border: 2px solid #ddd;"></div>
+                    <div style="width: 30px; height: 30px; border-radius: 50%; background: #e6f0ff; border: 2px solid #4361ee;"></div>
+                    <div style="width: 30px; height: 30px; border-radius: 50%; background: #e6ffee; border: 2px solid #4cc9f0;"></div>
+                    <div style="width: 30px; height: 30px; border-radius: 50%; background: #fff9e6; border: 2px solid #ffcc00;"></div>
+                    <div style="width: 30px; height: 30px; border-radius: 50%; background: #ffebee; border: 2px solid #f72585;"></div>
+                    <div style="width: 30px; height: 30px; border-radius: 50%; background: #f3e5ff; border: 2px solid #9c27b0;"></div>
+                </div>
+                <div class="tip">
+                    <strong>Uso recomendado:</strong> Asigna colores por tipo de tarea, prioridad o equipo responsable.
+                </div>
+            </div>
+        </section>
+        
+        <section id="calendar" class="guide-section">
+            <h2>Calendario interactivo</h2>
+            <div class="feature-card">
+                <h3>Eventos y tareas</h3>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <p><strong>Crear eventos:</strong> Haz clic en "+ Añadir Evento" y completa los detalles.</p>
+                        <p>Selecciona entre tipos Normal, Hito o Fase para diferentes colores.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <p><strong>Convertir en tarea:</strong> Arrastra cualquier evento a una columna Kanban.</p>
+                        <p>La nueva tarea mantendrá el nombre y fecha del evento.</p>
+                    </div>
+                </div>
+                
+                <div class="warning">
+                    <strong>Nota:</strong> Los eventos vinculados a tareas muestran un indicador especial y se sincronizan automáticamente.
+                </div>
+            </div>
+        </section>
+        
+        <section id="data-management" class="guide-section">
+            <h2>Gestión de Datos</h2>
+            <div class="feature-card">
+                <h3>Exportar e importar</h3>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <p><strong>Exportar:</strong> Guarda todos tus datos en un archivo JSON con el botón correspondiente.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <p><strong>Importar:</strong> Carga un archivo JSON previamente exportado para recuperar tus datos.</p>
+                    </div>
+                </div>
+                
+                <div class="warning">
+                    <strong>Importante:</strong> La importación reemplazará todos los datos actuales. Haz copias de seguridad regularmente.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <script>
+        // Mobile menu toggle (solo en móvil)
+        function setupMobileMenu() {
+            const menuToggle = document.getElementById('menuToggle');
+            const sidebar = document.getElementById('sidebar');
+            
+            if (window.innerWidth <= 768) {
+                menuToggle.style.display = 'block';
+                menuToggle.addEventListener('click', () => {
+                    sidebar.classList.toggle('active');
+                });
+            }
+        }
+        
+        // Reloj funcional
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            if (clockElement) {
+                const now = new Date();
+                clockElement.textContent = now.toLocaleTimeString('es-ES', {hour12: false});
+            }
+        }
+        
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            setupMobileMenu();
+            updateClock();
+            setInterval(updateClock, 1000);
+            
+            // Smooth scrolling para el menú
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if (this.hash) {
+                        e.preventDefault();
+                        document.querySelector(this.hash).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+        
+        // Ajustar menú en redimensionamiento
+        window.addEventListener('resize', setupMobileMenu);
+    </script>
+</body>
+</html>
