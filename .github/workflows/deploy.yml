@@ -1,29 +1,33 @@
-name: Deploy to gh-pages
+name: Deploy to GitHub Pages
+
 on:
   push:
-    branches: [ "main" ]  # Se activa con cambios en main
+    branches: [ "main" ]  # Se activa al hacer push a main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Permiso para push a gh-pages
+      contents: write  # Necesario para escribir en gh-pages
 
     steps:
+      # 1. Descarga el código de main
       - uses: actions/checkout@v4
 
-      # Filtra archivos (personaliza esta lista)
-      - name: Filter files
+       # Elimina lo que no quieras en producción
+      - name: Cleanup files
         run: |
-          rm -rf .github/ README.md SECURITY.md LICENSE.md
-          mkdir -p public
-          cp -r index.html css/ js/ public/  # Copia SOLO lo necesario
+          rm -rf README.md .github/ 
+          
+      # 2. (Opcional) Lista archivos para verificar
+      - name: List files
+        run: |
+          ls -R
 
+      # 3. Despliega en gh-pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public  # ¡Nuevo! Usa una carpeta filtrada
-          publish_branch: gh-pages
-          keep_files: false  # Limpia la rama gh-pages completamente
-          force_orphan: true  # Elimina el historial previo (opcional)
+          publish_dir: ./          # Usa la raíz del proyecto (donde está index.html)
+          keep_files: false        # Limpia gh-pages antes del deploy
