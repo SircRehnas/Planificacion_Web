@@ -55,7 +55,7 @@ Planificacion_Web es una aplicación web completa para la gestión de tareas per
 ### Versión Básica (sin servidor)
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/planificador-webapp.git
+git clone https://github.com/SircRehnas/planificacion_web.git
 ```
 2. Abre index.html en tu navegador (no requiere servidor para la versión básica)
 
