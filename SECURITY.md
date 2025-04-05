@@ -6,7 +6,7 @@ Si descubres una vulnerabilidad de seguridad en este proyecto, por favor notifí
 
 **Por favor, NO crees un issue público** para reportar vulnerabilidades.
 
-En su lugar, utiliza la función **"Report a vulnerability"** en la pestaña [Security](https://github.com/tu-usuario/tu-repositorio/security) de este repositorio. Esto permitirá manejar el reporte de forma privada.
+En su lugar, utiliza la función **"Report a vulnerability"** en la pestaña [Security](https://github.com/SircRehnas/Planificacion_Web/security) de este repositorio. Esto permitirá manejar el reporte de forma privada.
 
 ## Proceso de Respuesta
 
