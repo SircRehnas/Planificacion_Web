@@ -96,17 +96,32 @@ Queda prohibido:
 ThianDev (GitHub: [SircRehnas](https://github.com/SircRehnas))-
 
 ## 📅 Roadmap
+- [x] Versión inicial
 - [ ] Implementar autenticación
-- [ ] Añadir soporte multi-usuario
 - [ ] Mejorar sistema de notificaciones
+- [ ] Sincronización en la nube
+- [ ] Diseño móvil
 
 ## ❓ FAQ
-<details>
-  <summary>¿Cómo hago backup de mis datos?</summary>
-  <p>Ve a Ajustes → Exportar Datos.</p>
-</details>
+### ¿Cómo hago backup de mis datos?
+::: tip
+Ve a **Exportar Datos** → descarga un archivo JSON con toda tu información.
+Ve a **Importar Datos** → importa un archivo JSON con toda tu información.
+:::
+
+### ¿Dónde se guardan mis datos?
+::: details Ver respuesta
+Por defecto se almacenan en:
+- **Navegador**: LocalStorage (persistente hasta limpiar caché)
+- **Servidor**: Si activas la versión con persistencia (MySQL)
 
 <details>
-  <summary>¿Dónde se guardan mis datos?</summary>
-  <p>En tu navegador (LocalStorage) y/o servidor si usas esa versión.</p>
+  <summary>¿Cómo exportar/importar datos?</summary>
+  1. Ve a Exportar → Descarga el archivo formato JSON
+  2. Ve a Importar → Selecciona el archivo formato JSON
+</details>
+<details>
+  <summary>¿Dónde se guardan los datos?</summary>
+  - Navegador: LocalStorage
+  - Servidor: .json
 </details>
