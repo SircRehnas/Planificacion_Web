@@ -225,7 +225,7 @@
             <div class="footer-bottom">
                 <div class="footer-legal">
                     <span>v1.2.0</span>
-                    <span id="last-saved">Último guardado: <span id="save-time"></span></span>
+                    <span id="last-saved">Último guardado: </span>
                     <span><a href="https://github.com/SircRehnas">[ThianDev]</a> © 2025 Planificador Kanban</span>
                     <a href="privacy.html">Privacidad</a>
                     <a href="terms.html">Términos</a>
@@ -302,16 +302,5 @@
     <script src="js/calendar.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/app.js"></script>
-    <script>
-        // Actualizar hora de último guardado
-        function updateLastSaved() {
-            const now = new Date();
-            const timeStr = now.toLocaleTimeString('es-ES', {hour12: false});
-            const dateStr = now.toLocaleDateString('es-ES');
-            document.getElementById('save-time').textContent = `${dateStr} ${timeStr}`;
-        }
-        
-        document.addEventListener('DOMContentLoaded', updateLastSaved);
-    </script>
 </body>
 </html>
