@@ -103,25 +103,44 @@ ThianDev (GitHub: [SircRehnas](https://github.com/SircRehnas))-
 - [ ] Diseño móvil
 
 ## ❓ FAQ
-### ¿Cómo hago backup de mis datos?
-::: tip
-Ve a **Exportar Datos** → descarga un archivo JSON con toda tu información.
-Ve a **Importar Datos** → importa un archivo JSON con toda tu información.
-:::
-
-### ¿Dónde se guardan mis datos?
-::: details Ver respuesta
-Por defecto se almacenan en:
-- **Navegador**: LocalStorage (persistente hasta limpiar caché)
-- **Servidor**: Si activas la versión con persistencia (MySQL)
-
 <details>
-  <summary>¿Cómo exportar/importar datos?</summary>
-  1. Ve a Exportar → Descarga el archivo formato JSON
-  2. Ve a Importar → Selecciona el archivo formato JSON
+  <summary>🔽<b>¿Cómo exportar/importar datos?</b></summary>
+  &nbsp;
+  <ol>
+    <li> Ve a <code>📤 Exportar</code> → Descarga un archivo formato JSON con:
+      <ul>
+        <li>Tareas del Kanban.</li>
+        <li>Eventos del calendario.</li>
+      </ul>
+    </li>
+    <li>Ve a <code>📤 Importar</code> → Selecciona el archivo formato JSON con toda tu información.</li>
+  </ol>
+  <br>
 </details>
 <details>
-  <summary>¿Dónde se guardan los datos?</summary>
-  - Navegador: LocalStorage
-  - Servidor: .json
+  <summary>🔽<b>¿Dónde se guardan los datos?</b></summary>
+  &nbsp;
+  <ul>
+    <li><b>Navegador</b>: <code>LocalStorage</code> (persistente hasta limpiar caché)</li>
+    <li><b>Servidor</b>: <code>JSON</code></li>
+  </ul>
+  <br>
 </details>
+<details>
+  <summary>🔽<b>¿Es seguro?</b></summary>
+  &nbsp;
+  <ul>
+    <li><b>Si</b>:
+      <ul>
+        <li><code>Nunca se envían a terceros.</code></li>
+        <li><code>Puedes auto-hospedar el servidor.</code></li> 
+      </ul>
+    </li>
+  </ul>
+  <br>
+</details>
+
+### 🔐 Recomendaciones:
+1. Exporta backups periódicos.
+2. No compartas archivos .json.
+3. En el modo edición del planificador asegurate de guardar lo cambios presionando el boton "💾 Guardar".
