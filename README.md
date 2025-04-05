@@ -47,8 +47,8 @@ Planificacion_Web es una aplicación web completa para la gestión de tareas per
 
 * Frontend: HTML5, CSS3, JavaScript (Vanilla)
 * Backend: PHP (opcional para persistencia de datos)
-* Almacenamiento: LocalStorage/IndexedDB (o .json para versión con backend)
-* Librerías: proyecto vanilla.
+* Almacenamiento: LocalStorage/IndexedDB (o `.json` para versión con backend)
+* Librerías:
 
 ## 🚀 Cómo Usar
 
@@ -57,14 +57,14 @@ Planificacion_Web es una aplicación web completa para la gestión de tareas per
 ```bash
 git clone https://github.com/SircRehnas/planificacion_web.git
 ```
-2. Abre index.html en tu navegador (no requiere servidor para la versión básica)
+2. Abre `index.html` en tu navegador (no requiere servidor para la versión básica)
 
 
 ### Versión con Persistencia (opcional)
 
 1. Configura un servidor local (XAMPP, WAMP, etc.)
 
-2. Asegurate de que se incluye el archivo save_data.php
+2. Asegurate de que se incluye el archivo `save_data.php`
 
 
 ## 📜 Licencia
@@ -93,7 +93,7 @@ Queda prohibido:
 
 ## 👨💻 Desarrollador
 
-ThianDev (GitHub: [SircRehnas](https://github.com/SircRehnas))-
+ThianDev (GitHub: [SircRehnas](https://github.com/SircRehnas))
 
 ## 📅 Roadmap
 - [x] Versión inicial
@@ -109,11 +109,11 @@ ThianDev (GitHub: [SircRehnas](https://github.com/SircRehnas))-
   <ol>
     <li> Ve a <code>📤 Exportar</code> → Descarga un archivo formato JSON con:
       <ul>
-        <li>Tareas del Kanban.</li>
-        <li>Eventos del calendario.</li>
+        <li>Tareas del Kanban</li>
+        <li>Eventos del calendario</li>
       </ul>
     </li>
-    <li>Ve a <code>📤 Importar</code> → Selecciona el archivo formato JSON con toda tu información.</li>
+    <li>Ve a <code>📤 Importar</code> → Selecciona el archivo formato JSON con toda tu información</li>
   </ol>
   <br>
 </details>
@@ -132,8 +132,8 @@ ThianDev (GitHub: [SircRehnas](https://github.com/SircRehnas))-
   <ul>
     <li><b>Si</b>:
       <ul>
-        <li><code>Nunca se envían a terceros.</code></li>
-        <li><code>Puedes auto-hospedar el servidor.</code></li> 
+        <li><code>Nunca se envían a terceros</code></li>
+        <li><code>Puedes auto-hospedar el servidor</code></li> 
       </ul>
     </li>
   </ul>
@@ -141,6 +141,6 @@ ThianDev (GitHub: [SircRehnas](https://github.com/SircRehnas))-
 </details>
 
 ### 🔐 Recomendaciones:
-1. Exporta backups periódicos.
-2. No compartas archivos .json.
-3. En el modo edición del planificador asegurate de guardar lo cambios presionando el boton "💾 Guardar".
+1. Exporta backups periódicos
+2. No compartas archivos .json
+3. En el modo edición del planificador asegurate de guardar lo cambios presionando el boton "💾 Guardar"
