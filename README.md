@@ -101,8 +101,12 @@ ThianDev (GitHub: [SircRehnas](https://github.com/SircRehnas))-
 - [ ] Mejorar sistema de notificaciones
 
 ## ❓ FAQ
-P: ¿Cómo hago backup de mis datos?
-R: Ve a Ajustes → Exportar Datos
+<details>
+  <summary>¿Cómo hago backup de mis datos?</summary>
+  <p>Ve a Ajustes → Exportar Datos.</p>
+</details>
 
-P: ¿Dónde se guardan mis datos?
-R: En tu navegador (LocalStorage) y/o servidor si usas esa versión
+<details>
+  <summary>¿Dónde se guardan mis datos?</summary>
+  <p>En tu navegador (LocalStorage) y/o servidor si usas esa versión.</p>
+</details>
