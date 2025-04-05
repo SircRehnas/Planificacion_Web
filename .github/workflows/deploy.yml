@@ -14,6 +14,11 @@ jobs:
       # 1. Descarga el código de main
       - uses: actions/checkout@v4
 
+       # Paso de limpieza (CORRECTO)
+      - name: Cleanup files
+        run: |
+          rm -rf README.md .github/
+          
       # 2. (Opcional) Lista archivos para verificar
       - name: List files
         run: |
