@@ -1,0 +1,28 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]  # Se activa al hacer push a main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Necesario para escribir en gh-pages
+
+    steps:
+      # 1. Descarga el código de main
+      - uses: actions/checkout@v4
+
+      # 2. (Opcional) Lista archivos para verificar
+      - name: List files
+        run: |
+          ls -R
+
+      # 3. Despliega en gh-pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./          # Usa la raíz del proyecto (donde está index.html)
+          keep_files: false        # Limpia gh-pages antes del deploy
