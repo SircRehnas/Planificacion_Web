@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anteproyecto Editable</title>
+    <title>Proyecto Editable</title>
     <link rel="stylesheet" href="css/planificador.css">
 </head>
 <body>
@@ -25,8 +25,8 @@
 
     <div class="container" id="editableContainer">
         <header>
-            <h1 class="editable" data-id="title">Anteproyecto: Gestión Digitalizada de Tickets de Gastos</h1>
-            <p class="editable" data-id="subtitle">Solución para digitalización, procesamiento y gestión segura de comprobantes de gastos empresariales</p>
+            <h1 class="editable" data-id="title">Proyecto Editable</h1>
+            <p class="editable" data-id="subtitle">Página editable para guiar tu proyecto</p>
         </header>
 
         <section class="section bg-color-1">
@@ -45,9 +45,9 @@
                 <button class="section-btn delete-section-btn">×</button>
             </div>
             
-            <h2 class="editable" data-id="desc-title">📌 Descripción del Proyecto</h2>
-            <p class="editable" data-id="desc-text">El proyecto consiste en desarrollar una solución que permita a los empleados de una empresa digitalizar tickets de gastos (restaurantes, transporte, gasolineras, etc.) mediante fotografías, almacenarlos en una base de datos segura y gestionarlos con control administrativo.</p>
-             <button class="edit-btn" id="addFeatureCard" style="display: none; margin-top: 1rem;">+ Añadir Tarjeta</button>
+            <h2 class="editable" data-id="desc-title">📌 Sección proyecto</h2>
+            <p class="editable" data-id="desc-text">El proyecto consiste en desarrollar una solución que permita...</p>
+            <button class="edit-btn" id="addFeatureCard" style="margin-top: 1rem;">+ Añadir Tarjeta</button>
             <div class="feature-list" id="featureList">
                 <div class="feature-card card-bg-color-1" draggable="true" data-id="feature1">
                     <div class="card-controls">
@@ -64,80 +64,9 @@
                         </div>
                         <button class="card-btn delete-card-btn">×</button>
                     </div>
-                    <h4 class="editable">Captura y Almacenamiento seguro</h4>
+                    <h4 class="editable">Titulo</h4>
                     <ul class="editable-list">
-                        <li class="editable">Tomar <span class="highlight">fotos de tickets</span> con la cámara del dispositivo</li>
-                        <li class="editable">Extracción automática del <span class="highlight">total con Tesseract OCR</span></li>
-                        <li class="editable">Metadatos: fecha, hora y ubicación. Se valorará añadir un campo 'notas'</li>
-                    </ul>
-                    <button class="add-btn add-list-item">+</button>
-                </div>
-                
-                <div class="feature-card card-bg-color-1" draggable="true" data-id="feature2">
-                    <div class="card-controls">
-                        <button class="card-btn change-card-color-btn">🎨</button>
-                        <div class="card-color-palette">
-                            <div class="card-color-option card-bg-color-1" data-color="1"></div>
-                            <div class="card-color-option card-bg-color-2" data-color="2"></div>
-                            <div class="card-color-option card-bg-color-3" data-color="3"></div>
-                            <div class="card-color-option card-bg-color-4" data-color="4"></div>
-                            <div class="card-color-option card-bg-color-5" data-color="5"></div>
-                            <div class="card-color-option card-bg-color-6" data-color="6"></div>
-                            <div class="card-color-option card-bg-color-7" data-color="7"></div>
-                            <div class="card-color-option card-bg-color-8" data-color="8"></div>
-                        </div>
-                        <button class="card-btn delete-card-btn">×</button>
-                    </div>
-                    <h4 class="editable">Gestión por Roles</h4>
-                    <ul class="editable-list">
-                        <li class="editable"><strong>Empleados:</strong> Subir tickets y ver historial</li>
-                        <li class="editable"><strong>Administradores:</strong> Configurar <span class="highlight">límites de gasto</span>, conexiones e informes</li>
-                    </ul>
-                    <button class="add-btn add-list-item">+</button>
-                </div>
-                
-                <div class="feature-card card-bg-color-1" draggable="true" data-id="feature3">
-                    <div class="card-controls">
-                        <button class="card-btn change-card-color-btn">🎨</button>
-                        <div class="card-color-palette">
-                            <div class="card-color-option card-bg-color-1" data-color="1"></div>
-                            <div class="card-color-option card-bg-color-2" data-color="2"></div>
-                            <div class="card-color-option card-bg-color-3" data-color="3"></div>
-                            <div class="card-color-option card-bg-color-4" data-color="4"></div>
-                            <div class="card-color-option card-bg-color-5" data-color="5"></div>
-                            <div class="card-color-option card-bg-color-6" data-color="6"></div>
-                            <div class="card-color-option card-bg-color-7" data-color="7"></div>
-                            <div class="card-color-option card-bg-color-8" data-color="8"></div>
-                        </div>
-                        <button class="card-btn delete-card-btn">×</button>
-                    </div>
-                    <h4 class="editable">Validación y Offline</h4>
-                    <ul class="editable-list">
-                        <li class="editable"> Investigar si las imágenes son válidas como comprobantes fiscales.</li>
-                        <li class="editable">Funcionamiento <span class="highlight">sin conexión</span> (almacenamiento local y sincronización posterior).</li>
-                    </ul>
-                    <button class="add-btn add-list-item">+</button>
-                </div>
-                
-                <div class="feature-card card-bg-color-1" draggable="true" data-id="feature4">
-                    <div class="card-controls">
-                        <button class="card-btn change-card-color-btn">🎨</button>
-                        <div class="card-color-palette">
-                            <div class="card-color-option card-bg-color-1" data-color="1"></div>
-                            <div class="card-color-option card-bg-color-2" data-color="2"></div>
-                            <div class="card-color-option card-bg-color-3" data-color="3"></div>
-                            <div class="card-color-option card-bg-color-4" data-color="4"></div>
-                            <div class="card-color-option card-bg-color-5" data-color="5"></div>
-                            <div class="card-color-option card-bg-color-6" data-color="6"></div>
-                            <div class="card-color-option card-bg-color-7" data-color="7"></div>
-                            <div class="card-color-option card-bg-color-8" data-color="8"></div>
-                        </div>
-                        <button class="card-btn delete-card-btn">×</button>
-                    </div>
-                    <h4 class="editable">Seguridad Robusta</h4>
-                    <ul class="editable-list">
-                        <li class="editable">Autenticación segura (¿biométrica?)</li>
-                        <li class="editable">Datos encriptados y <span class="highlight">Prepared Statements</span></li>
+                        <li class="editable">Feature <span class="highlight">Card</span> de prueba</li>
                     </ul>
                     <button class="add-btn add-list-item">+</button>
                 </div>
@@ -163,8 +92,8 @@
             
             <h2 class="editable" data-id="env-title">💻 Entorno de Trabajo</h2>
             
-            <h3 class="editable" data-id="platform-title">Plataforma de Desarrollo</h3>
-            <button class="edit-btn" id="addTechCard">+ Añadir Tarjeta Tecnológica</button>
+            <h3 class="editable" data-id="platform-title">Sección entorno</h3>
+            <button class="edit-btn" id="addTechCard">+ Añadir Tarjeta de Entorno</button>
             <div class="tech-grid" id="techGrid">
                 <div class="tech-card card-bg-color-1" draggable="true" data-id="tech1">
                     <div class="card-controls">
@@ -181,11 +110,11 @@
                         </div>
                         <button class="card-btn delete-card-btn">×</button>
                     </div>
-                    <h4 class="editable">Opción Nativa (Android)</h4>
+                    <h4 class="editable">Entorno A</h4>
                     <ul class="editable-list">
-                        <li class="editable"><strong>IDE:</strong> Android Studio</li>
-                        <li class="editable"><strong>Lenguaje:</strong> Kotlin</li>
-                        <li class="editable"><strong>Dependencias:</strong> Tesseract OCR, Retrofit, Room</li>
+                        <li class="editable"><strong>IDE:</strong> </li>
+                        <li class="editable"><strong>Lenguaje:</strong> </li>
+                        <li class="editable"><strong>Dependencias:</strong></li>
                     </ul>
                     <button class="add-btn add-list-item">+</button>
                 </div>
@@ -205,11 +134,11 @@
                         </div>
                         <button class="card-btn delete-card-btn">×</button>
                     </div>
-                    <h4 class="editable">Opción PWA</h4>
+                    <h4 class="editable">Entorno B</h4>
                     <ul class="editable-list">
-                        <li class="editable"><strong>IDE:</strong> VS Code</li>
-                        <li class="editable"><strong>Tecnologías:</strong> HTML5, CSS, JavaScript</li>
-                        <li class="editable"><strong>OCR:</strong> Tesseract.js</li>
+                        <li class="editable"><strong>IDE:</strong> </li>
+                        <li class="editable"><strong>Tecnologías:</strong> </li>
+                        <li class="editable"><strong>OCR:</strong> </li>
                     </ul>
                     <button class="add-btn add-list-item">+</button>
                 </div>
@@ -217,19 +146,19 @@
             
             <h3 class="editable" data-id="infra-title">Infraestructura</h3>
             <ul class="editable-list">
-                <li class="editable"><strong>Servidor empresarial:</strong> Almacenamiento SQL centralizado</li>
-                <li class="editable"><strong>Pruebas:</strong> Dispositivos Android reales + emuladores</li>
+                <li class="editable"><strong>Arquitertura uno:</strong> texto</li>
+                <li class="editable"><strong>Arquitertura dos:</strong> texto</li>
                 <li class="editable"><strong>Control de versiones:</strong> Git. <span class="highlight"><a href="https://github.com/SircRehnas">[ThianDev]</a></span></li>
             </ul>
             <button class="add-btn add-list-item">+</button>
             
             <h3 class="editable" data-id="workflow-title">Flujo de Trabajo</h3>
             <ol class="editable-list">
-                <li class="editable">Análisis de requisitos (completado)</li>
-                <li class="editable">Diseño de prototipo (Figma)</li>
-                <li class="editable">Desarrollo en sprints</li>
-                <li class="editable">Testing (unitario, integración, usuarios)</li>
-                <li class="editable">Despliegue en servidor interno</li>
+                <li class="editable">Análisis</li>
+                <li class="editable">Diseño</li>
+                <li class="editable">Desarrollo</li>
+                <li class="editable">Testing</li>
+                <li class="editable">Despliegue</li>
             </ol>
             <button class="add-btn add-list-item">+</button>
         </section>
@@ -250,38 +179,34 @@
                 <button class="section-btn delete-section-btn">×</button>
             </div>
             
-            <h2 class="editable" data-id="decision-title">⚖️ Decisión Técnica: PWA vs Nativo</h2>
+            <h2 class="editable" data-id="decision-title">Sección bloques</h2>
             
             <div class="decision-card">
-                <h3 class="editable">Recomendación Inicial</h3>
-                <p class="editable">Dado el enfoque en <span class="highlight">seguridad y funcionalidad offline</span>, y tu experiencia con Kotlin, la opción <strong>nativa Android</strong> parece más adecuada.</p>
+                <h3 class="editable">Titulo</h3>
+                <p class="editable">Descripción de <span class="highlight">bloques</span></p>
             </div>
             
             <div class="pros-cons">
                 <div class="pros">
-                    <h4 class="editable">Ventajas Nativo</h4>
+                    <h4 class="editable">Ventajas </h4>
                     <ul class="editable-list">
-                        <li class="editable">Mayor rendimiento en OCR</li>
-                        <li class="editable">Acceso completo a hardware</li>
-                        <li class="editable">Más seguro para datos sensibles</li>
-                        <li class="editable">Mejor soporte offline</li>
+                        <li class="editable">ventaja 1</li>
+                        <li class="editable">ventaja 2</li>
                     </ul>
                     <button class="add-btn add-list-item">+</button>
                 </div>
                 
                 <div class="cons">
-                    <h4 class="editable">Ventajas PWA</h4>
+                    <h4 class="editable">Desventajas</h4>
                     <ul class="editable-list">
-                        <li class="editable">Desarrollo más rápido</li>
-                        <li class="editable">Multiplataforma (web/móvil)</li>
-                        <li class="editable">Sin dependencia de stores</li>
-                        <li class="editable">Actualizaciones inmediatas</li>
+                        <li class="editable">ventaja 1</li>
+                        <li class="editable">ventaja 2</li>
                     </ul>
                     <button class="add-btn add-list-item">+</button>
                 </div>
             </div>
             
-            <p class="editable"><strong>Nota:</strong> Validar con el cliente si necesita soporte multiplataforma (iOS/Web) en el futuro.</p>
+            <p class="editable"><strong>Nota:</strong> nota 1</p>
         </section>
 
         <section class="section bg-color-4">
@@ -300,22 +225,20 @@
                 <button class="section-btn delete-section-btn">×</button>
             </div>
             
-            <h2 class="editable" data-id="nextsteps-title">📅 Próximos Pasos</h2>
+            <h2 class="editable" data-id="nextsteps-title">Sección Lista</h2>
             
             <div class="next-steps">
                 <ol class="editable-list">
-                    <li class="editable"><strong>Validación con cliente:</strong> Confirmar preferencia (nativo/PWA) y aprobar diseño de interfaz</li>
-                    <li class="editable"><strong>Investigación legal:</strong> Consultar validez fiscal de imágenes digitales</li>
-                    <li class="editable"><strong>Planificación técnica:</strong> Definir arquitectura (MVP) y configurar servidor (API, BD)</li>
-                    <li class="editable"><strong>Prototipado:</strong> Diseñar flujos de usuario clave</li>
-                    <li class="editable"><strong>Setup inicial:</strong> Configurar entorno de desarrollo y repositorio</li>
+                    <li class="editable"><strong>Tarea 1</strong> texto</li>
+                    <li class="editable"><strong>Tarea 2</strong> texto</li>
+                    <li class="editable"><strong>Tarea 3</strong> texto</li>
                 </ol>
                 <button class="add-btn add-list-item">+</button>
             </div>
             
             <div style="margin-top: 2rem; padding: 1.5rem; background-color: rgba(76, 201, 240, 0.1); border-radius: var(--border-radius);">
-                <h3 class="editable">🔍 Nota Final</h3>
-                <p class="editable">Este anteproyecto se alinea con las necesidades del cliente y del entorno de trabajo actual. La opción nativa aprovecha mi experiencia en Kotlin/Android Studio, mientras que una PWA sería viable si priorizan rapidez de implementación o multiplataforma.</p>
+                <h3 class="editable">Conclusion/Notas</h3>
+                <p class="editable">Conclusiones o notas</p>
             </div>
         </section>
     </div>
