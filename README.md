@@ -19,6 +19,21 @@ Planificacion_Web es una aplicación web completa para la gestión de tareas per
 
    ✅ Diseño moderno y responsive  
 
+## 🚀 Cómo Usar
+
+### Versión Básica (sin servidor)
+1. Clona el repositorio:
+```bash
+git clone https://github.com/SircRehnas/planificacion_web.git
+```
+2. Abre `index.html` en tu navegador (no requiere servidor para la versión básica)
+
+
+### Versión con Persistencia (opcional)
+
+1. Configura un servidor local (XAMPP, WAMP, etc.)
+
+2. Asegurate de que se incluye el archivo `save_data.php`
 
 ### 📌 Tablero Kanban
 * Organiza tus tareas en columnas personalizables (Por hacer, En progreso, Completado)
@@ -49,23 +64,6 @@ Planificacion_Web es una aplicación web completa para la gestión de tareas per
 * Backend: PHP (opcional para persistencia de datos)
 * Almacenamiento: LocalStorage/IndexedDB (o `.json` para versión con backend)
 * Librerías:
-
-## 🚀 Cómo Usar
-
-### Versión Básica (sin servidor)
-1. Clona el repositorio:
-```bash
-git clone https://github.com/SircRehnas/planificacion_web.git
-```
-2. Abre `index.html` en tu navegador (no requiere servidor para la versión básica)
-
-
-### Versión con Persistencia (opcional)
-
-1. Configura un servidor local (XAMPP, WAMP, etc.)
-
-2. Asegurate de que se incluye el archivo `save_data.php`
-
 
 ## 📜 Licencia
 
