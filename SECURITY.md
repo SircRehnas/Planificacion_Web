@@ -10,7 +10,7 @@ En su lugar, utiliza la función **"Report a vulnerability"** en la pestaña [Se
 
 ## Proceso de Respuesta
 
-1. Confirmaré tu reporte dentro de [X días hábiles]
+1. Confirmaré tu reporte dentro de [3 días hábiles]
 2. Investigaré la vulnerabilidad y su impacto
 3. Trabajaré en una solución
 4. Lanzaré una actualización o parche una vez que la vulnerabilidad sea mitigada
