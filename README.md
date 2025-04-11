@@ -7,6 +7,8 @@
 
 Planificacion_Web es una aplicación web completa para la gestión de tareas personales y proyectos profesionales. Combina un tablero Kanban interactivo con un calendario de eventos e incluye página de planificación de proyectos.
 
+[📥 Demo (Alpha)](https://sircrehnas.github.io/Planificacion_Web/)
+
 ## Características Principales
 
    ✅ Calendario integrado para planificación de sprints
